@@ -3,7 +3,7 @@ using System.Media;  // For playing sound files
 using System.Threading;
 using ConsoleApp1;  // For potential future use with delays or threading
 
-namespace CybersecurityChatbot
+namespace ConsoleApp1
 {
     class Program
     {
@@ -15,8 +15,8 @@ namespace CybersecurityChatbot
             // Display ASCII art and a welcome message
             ImageDisplay.DisplayAsciiArt();
 
-            // Begin user interaction loop
-            ChatBotData.StartConversation();
-        }      
+            var manager = new ConversationManager();
+            manager.Start();
+        }
     }
 }
